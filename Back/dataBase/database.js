@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize'
 //Database hosteada pelo elephantSQL
 
-const sequelize = new Sequelize('postgres://vrosixkb:dAdUkYyH4re21uIsr74xwLgneIHB9WKP@silly.db.elephantsql.com/vrosixkb')
+const sequelize = new Sequelize('postgres://jrzeoljx:yckQ-slYXqRFOuquY3y5niJybzU1BgXW@silly.db.elephantsql.com/jrzeoljx')
 
 try {
     await sequelize.authenticate()

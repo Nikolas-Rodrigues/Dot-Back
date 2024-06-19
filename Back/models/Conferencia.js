@@ -11,7 +11,7 @@ const Conferencia = sequelize.define('Conferencia', {
         type: DataTypes.STRING(255)
     },
     data: {
-        type: DataTypes.DATE
+        type: DataTypes.STRING(255)
     },
     link: {
         type: DataTypes.STRING(255)
