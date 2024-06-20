@@ -18,40 +18,6 @@ const addConferencia = async (req, res) => {
 };
 
 
-
-
-
-
-const exConferencia = async (req, res) => {
-    const dia = req.body.dia;
-    console.log(req.body)
-    console.log(dia)
-    console.log("aqui")
-    const conferenciaExistente = await Conferencia.findOne({ where: { data: dia } });
-    try {
-        if (!conferenciaExistente) {
-            return res.status(404).send({ mensagem: 'Conferência não encontrada para a data fornecida' });
-        }
-        else {
-            await Conferencia.destroy({ where: { data: dia } });
-            res.status(200).send({ mensagem: 'Conferência excluída com sucesso' });
-        }
-    } catch (erro) {
-        console.error('Erro ao excluir conferência:', erro);
-        res.status(500).send({ mensagem: 'Erro ao excluir conferência' });
-    }
-};
-
-
-
-
-
-
-
-
-
-
-
 export {
-    addConferencia, exConferencia
+    addConferencia
 };
